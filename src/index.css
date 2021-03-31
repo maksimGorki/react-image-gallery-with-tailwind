@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.imageCardContainer {
+  @apply container
+  mx-auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.imageGrid {
+  @apply grid
+  grid-cols-3
+  gap-4;
+}
+
+.wrapper {
+  @apply max-w-sm
+  rounded-md
+  overflow-hidden
+  shadow-2xl;
+}
+
+.photo {
+  @apply w-full;
+}
+
+.photoAuthor {
+  @apply px-6
+  py-4;
+}
+
+.photoAuthorText {
+  @apply font-bold
+  text-purple-600
+  text-xl
+  px-3
+  mb-2;
+}
+
+.listItemText {
+  @apply px-3;
+}
+
+.preloader {
+  @apply fixed
+  top-0
+  left-0
+  right-0
+  bottom-0
+  bg-white
+  grid
+  justify-center
+  items-center
+  visible
+  transition
+  duration-700;
+}
+
+.hashtagContainer {
+  @apply px-6
+  py-4;
+}
+
+.hashtag {
+  @apply inline-block
+  bg-gray-300
+  rounded-full
+  px-3
+  py-1
+  text-sm
+  font-semibold
+  text-gray-700
+  font-bold
+  mr-2;
+}
+
+.searchBoxContainer {
+  @apply max-w-sm 
+  rounded 
+  overflow-hidden 
+  my-10 
+  mx-auto;
+}
+
+.formContainer {
+  @apply w-full 
+  max-w-sm;
+}
+
+.inputBox {
+  @apply flex 
+  items-center 
+  border-b 
+  border-b-2 
+  border-gray-500
+  py-2;
+}
+
+.inputBar {
+  @apply appearance-none 
+  bg-transparent 
+  border-none 
+  w-full 
+  text-gray-700 
+  mr-3 
+  py-1 
+  px-2 
+  leading-tight 
+  focus:outline-none;
+}
+
+.buttonBox {
+  @apply flex-shrink-0 
+  bg-gray-500 
+  hover:bg-blue-700 
+  border-gray-500 
+  hover:border-blue-700 
+  text-sm 
+  border-4 
+  text-white 
+  py-1 
+  px-2 
+  rounded;
+}
+
+.noImagesFound {
+  @apply text-5xl
+  text-center
+  mx-auto
+  mt-32;
 }
